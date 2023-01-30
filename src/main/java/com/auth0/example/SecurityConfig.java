@@ -22,6 +22,8 @@ public class SecurityConfig {
         http.authorizeRequests()
         	.anyRequest()
         	.permitAll();
+        
+        http.cors().disable(); // Atenção aqui!
     	
 //    	http
 //    		.authorizeRequests()

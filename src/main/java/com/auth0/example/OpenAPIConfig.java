@@ -4,9 +4,6 @@ import org.springframework.context.annotation.Configuration;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
-import io.swagger.v3.oas.annotations.extensions.Extension;
-import io.swagger.v3.oas.annotations.extensions.ExtensionProperty;
-import io.swagger.v3.oas.annotations.extensions.Extensions;
 import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.info.License;
@@ -39,8 +36,7 @@ import io.swagger.v3.oas.annotations.security.SecurityScheme;
 			@OAuthFlow(
 					authorizationUrl = "${springdoc.oAuthFlow.authorizationUrl}", 
 					tokenUrl = "${springdoc.oAuthFlow.tokenUrl}", 
-					refreshUrl = "${springdoc.oAuthFlow.tokenUrl}",
-					extensions = {@Extension(name = "audience", properties = {@ExtensionProperty(name = "audience", value = "http://localhost:3000/api")})}
+					refreshUrl = "${springdoc.oAuthFlow.tokenUrl}"
 					)))
 @Configuration
 public class OpenAPIConfig {

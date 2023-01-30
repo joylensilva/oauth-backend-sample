@@ -1,5 +1,6 @@
 server:
   port: 3000
+  forward-headers-strategy: framework
 
 logging:
   level:
